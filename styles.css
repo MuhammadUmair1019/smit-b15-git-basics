@@ -1,0 +1,138 @@
+.box-5 {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  margin: 2rem auto;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: 0% 50%;
+}
+
+.box-5:hover {
+  /* transform: translateX(10px); */
+  /* transform: translateY(20px); */
+  /* transform: translate(40px, 20px); */
+  transform: rotate(180deg);
+  /* transform: scaleX(2); */
+  /* transform: scaleY(2); */
+  /* transform: scale(2, 2); */
+
+  /* transform: skew(40deg, 30deg); */
+}
+
+/* transition */
+.box-4 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  /* transition-property: background-color, width; */
+  /* transition-duration: 1s; */
+  /* transition-timing-function: ease-in-out; */
+  transition: all 1s ease-in-out;
+  display: none;
+}
+
+.box-4:hover {
+  background-color: aqua;
+  width: 150px;
+}
+
+/* ----------------------------------------- */
+/* animations */
+.box-3 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: red;
+  animation-name: move-around;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  position: relative;
+  display: none;
+}
+
+@keyframes move-around {
+  0% {
+    top: 0;
+    left: 0;
+    background-color: aqua;
+  }
+
+  25% {
+    top: 0;
+    left: 80px;
+    background-color: brown;
+  }
+
+  50% {
+    top: 80px;
+    left: 80px;
+    background-color: green;
+  }
+
+  75% {
+    top: 80px;
+    left: 0;
+    background-color: yellow;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+    background-color: blueviolet;
+  }
+}
+
+.box-2 {
+  width: 10px;
+  height: 10px;
+  background-color: brown;
+  animation-name: grow-width;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  display: none;
+}
+
+@keyframes grow-width {
+  0% {
+    width: 10px;
+  }
+
+  50% {
+    background-color: blue;
+  }
+
+  100% {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+  }
+}
+
+.box-1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: change-bg;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  /* animation-delay: 2s; */
+  animation-fill-mode: forwards;
+  animation-direction: alternate-reverse;
+  margin-bottom: 2rem;
+  display: none;
+}
+
+@keyframes change-bg {
+  from {
+    background-color: red;
+  }
+
+  to {
+    background-color: green;
+  }
+}
+
+/* .box-1:hover {
+    background-color: green;
+} */
